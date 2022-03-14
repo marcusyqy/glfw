@@ -1,3 +1,4 @@
+
 project "GLFW"
 	kind "StaticLib"
 	language "C"
@@ -62,7 +63,10 @@ project "GLFW"
 		defines
 		{
 			"_GLFW_WIN32",
-			"_CRT_SECURE_NO_WARNINGS"
+			"_CRT_SECURE_NO_WARNINGS",
+            "GLFW_EXPOSE_NATIVE_WIN32",
+            --"CONSOLE_APP",
+            "GLFW_EXPOSE_NATIVE_WGL"
 		}
 
 	filter "configurations:Debug"
